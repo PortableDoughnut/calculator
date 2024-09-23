@@ -31,8 +31,8 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="8rS-Aa-ZBK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KYp-mA-D4a" secondAttribute="leading" constant="20" symbolic="YES" id="pgm-A3-mUE"/>
                                             <constraint firstAttribute="trailing" secondItem="8rS-Aa-ZBK" secondAttribute="trailing" constant="8" id="toF-Ky-1if"/>
-                                            <constraint firstAttribute="bottom" secondItem="8rS-Aa-ZBK" secondAttribute="bottom" constant="8" id="xVu-bF-Zoa"/>
                                             <constraint firstAttribute="bottom" secondItem="8rS-Aa-ZBK" secondAttribute="bottom" constant="20" id="xph-J0-F7R"/>
                                         </constraints>
                                     </view>
