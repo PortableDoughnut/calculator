@@ -46,27 +46,36 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmH-fc-egd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Clear" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="clearButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wy2-6L-XC6"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PK-lp-9Ky">
                                                                 <rect key="frame" x="103.66666666666669" y="0.0" width="103" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="+/-"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="+/-" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-SF-ZHR">
                                                                 <rect key="frame" x="207.66666666666666" y="0.0" width="102.66666666666666" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="%"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="%" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARh-fc-Vvf">
                                                                 <rect key="frame" x="311.33333333333331" y="0.0" width="102.66666666666669" height="106.66666666666667"/>
