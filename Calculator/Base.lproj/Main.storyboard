@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23089" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23077"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,7 +46,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmH-fc-egd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Clear"/>
@@ -56,24 +56,27 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PK-lp-9Ky">
                                                                 <rect key="frame" x="103.66666666666669" y="0.0" width="103" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="+/-"/>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0j-SF-ZHR">
                                                                 <rect key="frame" x="207.66666666666666" y="0.0" width="102.66666666666666" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="backgroundColor" red="0.08235294118" green="0.019607843140000001" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="%"/>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARh-fc-Vvf">
                                                                 <rect key="frame" x="311.33333333333331" y="0.0" width="102.66666666666669" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="÷"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="÷" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.96862745100000003" green="0.098039215690000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="operatorToched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRp-7L-xRu"/>
                                                                 </connections>
@@ -85,7 +88,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siN-Ci-MR9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="7"/>
@@ -95,7 +98,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDh-mm-YAa">
                                                                 <rect key="frame" x="103.66666666666669" y="0.0" width="103" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="8"/>
@@ -105,7 +108,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAA-QP-9qy">
                                                                 <rect key="frame" x="207.66666666666666" y="0.0" width="102.66666666666666" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="9"/>
@@ -115,10 +118,13 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtN-it-T6w">
                                                                 <rect key="frame" x="311.33333333333331" y="0.0" width="102.66666666666669" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="x"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="x" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.96862745100000003" green="0.098039215690000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="operatorToched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9Z-ED-k6t"/>
                                                                 </connections>
@@ -130,7 +136,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZV-FF-FyA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="107"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="4"/>
@@ -140,7 +146,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-UL-RgM">
                                                                 <rect key="frame" x="103.66666666666669" y="0.0" width="103" height="107"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="5"/>
@@ -150,7 +156,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gph-rS-Z4T">
                                                                 <rect key="frame" x="207.66666666666666" y="0.0" width="102.66666666666666" height="107"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="6"/>
@@ -160,10 +166,13 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSs-bd-hdc">
                                                                 <rect key="frame" x="311.33333333333331" y="0.0" width="102.66666666666669" height="107"/>
-                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="-" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.96862745100000003" green="0.098039215690000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="operatorToched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYN-cN-Hcb"/>
                                                                 </connections>
@@ -175,7 +184,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1u-Sq-BOI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
@@ -185,7 +194,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAP-ju-zcj">
                                                                 <rect key="frame" x="103.66666666666669" y="0.0" width="103" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="2"/>
@@ -195,7 +204,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-0V-Ncd">
                                                                 <rect key="frame" x="207.66666666666666" y="0.0" width="102.66666666666666" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="3"/>
@@ -205,10 +214,13 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zd-Fi-TGr">
                                                                 <rect key="frame" x="311.33333333333331" y="0.0" width="102.66666666666669" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.96862745100000003" green="0.098039215690000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="operatorToched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNe-MN-fcg"/>
                                                                 </connections>
@@ -220,7 +232,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-H6-iNL">
                                                                 <rect key="frame" x="0.0" y="0.0" width="206.66666666666666" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="0"/>
@@ -230,7 +242,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzf-Sl-NmR">
                                                                 <rect key="frame" x="207.66666666666666" y="0.0" width="102.66666666666666" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                                <color key="backgroundColor" red="0.23137254900000001" green="0.1960784314" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="."/>
@@ -240,10 +252,13 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-lO-M9N">
                                                                 <rect key="frame" x="311.33333333333331" y="0.0" width="102.66666666666669" height="106.66666666666667"/>
-                                                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="="/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="=" cornerStyle="capsule">
+                                                                    <backgroundConfiguration key="background">
+                                                                        <color key="backgroundColor" red="0.96862745100000003" green="0.098039215690000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </backgroundConfiguration>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="equalTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xC7-Js-fe0"/>
                                                                 </connections>
@@ -272,7 +287,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.019607843140000001" green="0.5568627451" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jSH-2c-Mkp" secondAttribute="trailing" id="3tU-LZ-IFE"/>
                             <constraint firstItem="jSH-2c-Mkp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KBv-0x-3RI"/>
@@ -295,15 +310,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
