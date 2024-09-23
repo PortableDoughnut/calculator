@@ -16,6 +16,7 @@ enum Operators: String {
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var resultDisplay: UIView!
     @IBOutlet weak var result: UILabel!
     
     var zeroPressed: Bool = false
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resultDisplay.layer.cornerRadius = 35
     }
 
     @IBAction func touchNumber(_ sender: UIButton) {
