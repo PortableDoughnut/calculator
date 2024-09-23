@@ -26,6 +26,11 @@ class ViewController: UIViewController {
     var operatorPressed: Operators?
     var operatorExists: Bool = false
     
+    func returnDoubleFromString(_ string: String) -> Double {
+        guard let double = Double(string) else { return 0 }
+        return double
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,7 +76,7 @@ class ViewController: UIViewController {
         operatorPressed = nil
     }
     
-    @IBAction func operatorToched(_ sender: UIButton) {
+    @IBAction func operatorTouched(_ sender: UIButton) {
         if !operatorExists {
             switch sender.titleLabel?.text {
             case "+":
@@ -104,13 +109,13 @@ class ViewController: UIViewController {
         
         switch operatorPressed {
         case .addition:
-            answer = String(Double(firstNumber)! + Double(secondNumber)!)
+            answer = String(returnDoubleFromString(firstNumber) + returnDoubleFromString(secondNumber))
         case .division:
-            answer = String(Double(firstNumber)! / Double(secondNumber)!)
+            answer = String(returnDoubleFromString(firstNumber) + returnDoubleFromString(secondNumber))
         case .multiplication:
-            answer = String(Double(firstNumber)! * Double(secondNumber)!)
+            answer = String(returnDoubleFromString(firstNumber) + returnDoubleFromString(secondNumber))
         case .subtraction:
-            answer = String(Double(firstNumber)! - Double(secondNumber)!)
+            answer = String(returnDoubleFromString(firstNumber) + returnDoubleFromString(secondNumber))
         default:
             print("Error: No operator pressed")
             answer = "0"
@@ -122,4 +127,3 @@ class ViewController: UIViewController {
         operatorPressed = nil
     }
 }
-

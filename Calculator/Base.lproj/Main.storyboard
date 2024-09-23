@@ -88,7 +88,7 @@
                                                                     </backgroundConfiguration>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="operatorToched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRp-7L-xRu"/>
+                                                                    <action selector="operatorTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRp-7L-xRu"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -145,7 +145,7 @@
                                                                     </backgroundConfiguration>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="operatorToched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9Z-ED-k6t"/>
+                                                                    <action selector="operatorTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9Z-ED-k6t"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -202,7 +202,7 @@
                                                                     </backgroundConfiguration>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="operatorToched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYN-cN-Hcb"/>
+                                                                    <action selector="operatorTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYN-cN-Hcb"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -259,7 +259,7 @@
                                                                     </backgroundConfiguration>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="operatorToched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNe-MN-fcg"/>
+                                                                    <action selector="operatorTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNe-MN-fcg"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
