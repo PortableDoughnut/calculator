@@ -15,7 +15,7 @@ enum Operators: String {
 }
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var resultDisplay: UIView!
     @IBOutlet weak var result: UILabel!
     
@@ -30,8 +30,16 @@ class ViewController: UIViewController {
         
         resultDisplay.layer.cornerRadius = 35
     }
-
+    
     @IBAction func touchNumber(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func clearButtonTouched(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func operatorTouched(_ sender: UIButton) {
         
     }
     
