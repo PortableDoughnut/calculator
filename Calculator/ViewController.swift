@@ -10,7 +10,7 @@ import UIKit
 enum Operators: String {
     case addition = "+"
     case subtraction = "-"
-    case multiplication = "*"
+    case multiplication = "x"
     case division = "÷"
     case percent = "%"
 }
@@ -62,6 +62,10 @@ class ViewController: UIViewController {
         result.text = resultOnScreen
     }
     
+    func addToEquation(_ button: ButtonType) {
+        equation.append(button)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -107,6 +111,30 @@ class ViewController: UIViewController {
               resultOnScreen: \(resultOnScreen)
               currentNumber: \(currentNumber)
               """)
+        print()
+        
+        guard let operatorTouchedAsString = sender.titleLabel?.text else {
+            print("operator title could not be converted to string")
+            return
+        }
+        
+        guard let currentOperator = Operators(rawValue: operatorTouchedAsString) else {
+            print("Operator could not be converted to the Operators type")
+            return
+        }
+        
+        equation.append(ButtonType.number(returnDoubleFromString(resultOnScreen)))
+        equation.append(ButtonType.operators(currentOperator))
+        
+        print("""
+              equation: \(equation)
+              resultOnScreen: \(resultOnScreen)
+              currentNumber: \(currentNumber)
+              """)
+        
+        result.text = "0"
+        resultOnScreen = result?.text ?? "0"
+        currentNumber = 0
     }
     
     @IBAction func equalTouched(_ sender: UIButton) {
