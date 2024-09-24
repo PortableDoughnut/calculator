@@ -12,6 +12,19 @@ enum Operators: String {
     case subtraction = "-"
     case multiplication = "*"
     case division = "÷"
+    case percent = "%"
+}
+
+enum MiscButtons {
+    case clear
+    case equal
+    case negative
+}
+
+enum ButtonType {
+    case number(Double)
+    case operators(Operators)
+    case misc(MiscButtons)
 }
 
 class ViewController: UIViewController {
@@ -19,6 +32,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultDisplay: UIView!
     @IBOutlet weak var result: UILabel!
     
+    var equation: [ButtonType] = []
+    var resultOnScreen: String = ""
     
     func returnDoubleFromString(_ string: String) -> Double {
         guard let double = Double(string) else { return 0 }
