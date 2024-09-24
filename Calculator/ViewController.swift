@@ -37,7 +37,9 @@ class ViewController: UIViewController {
     var currentNumber: Double = 0
     
     func returnDoubleFromString(_ string: String) -> Double {
-        guard let double = Double(string) else { return 0 }
+        guard let double = Double(string) else {
+            print("returnDoubleFromString: string is not a Double")
+            return 0 }
         return double
     }
     
@@ -69,6 +71,8 @@ class ViewController: UIViewController {
     
     @IBAction func touchNumber(_ sender: UIButton) {
         if let numberTouchedAsString = sender.titleLabel?.text {
+            if numberTouchedAsString  == "." { resultOnScreen.append(".")
+            }
             let numberTouchedAsDouble = returnDoubleFromString(numberTouchedAsString)
             if currentNumber != 0 {
                 currentNumber = numberTouchedAsDouble
