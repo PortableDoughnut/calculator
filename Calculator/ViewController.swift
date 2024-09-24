@@ -41,10 +41,20 @@ class ViewController: UIViewController {
         return double
     }
     
+    func clearZeroes() {
+        if resultOnScreen.first == "0" {
+            resultOnScreen.removeFirst()
+        }
+        if resultOnScreen.last == "0" && resultOnScreen.contains(".") {
+            resultOnScreen.removeLast()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let resultOnScreen = result.text else { return }
+        guard let resultOnScreenToAssign = result.text else { return }
+        resultOnScreen = resultOnScreenToAssign
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,9 +64,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchNumber(_ sender: UIButton) {
-        if let numberTouched = sender.titleLabel?.text {
-            
-        } else { print("Could not convert button label to a String") }
+        if let numberTouchedAsString = sender.titleLabel?.text {
+            let numberTouchedAsDouble = returnDoubleFromString(numberTouchedAsString)
+            if currentNumber != 0 {
+                currentNumber = numberTouchedAsDouble
+            } else {
+                currentNumber = currentNumber * 10 + Double(numberTouchedAsDouble)
+            }
+        } else { print("Could not convert button label to a Int") }
+        resultOnScreen.append(String(currentNumber))
+        if resultOnScreen.contains(".0") {
+            resultOnScreen = resultOnScreen.replacingOccurrences(of: ".0", with: "")
+        }
+        clearZeroes()
+        result.text = resultOnScreen
     }
     
     @IBAction func clearButtonTouched(_ sender: UIButton) {
