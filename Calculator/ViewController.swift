@@ -95,11 +95,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearButtonTouched(_ sender: UIButton) {
-        
+        equation.removeAll()
+        result.text = "0"
+        resultOnScreen = result?.text ?? "0"
+        currentNumber = 0
     }
     
     @IBAction func operatorTouched(_ sender: UIButton) {
-        
+        print("""
+              equation: \(equation)
+              resultOnScreen: \(resultOnScreen)
+              currentNumber: \(currentNumber)
+              """)
     }
     
     @IBAction func equalTouched(_ sender: UIButton) {
