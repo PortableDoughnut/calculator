@@ -71,15 +71,19 @@ class ViewController: UIViewController {
     
     @IBAction func touchNumber(_ sender: UIButton) {
         if let numberTouchedAsString = sender.titleLabel?.text {
-            if numberTouchedAsString  == "." { resultOnScreen.append(".")
-            }
-            let numberTouchedAsDouble = returnDoubleFromString(numberTouchedAsString)
-            if currentNumber != 0 {
-                currentNumber = numberTouchedAsDouble
+            if numberTouchedAsString  == "." {
+                if !resultOnScreen.contains(".") {
+                    resultOnScreen.append(".")
+                } else { return }
             } else {
-                currentNumber = currentNumber * 10 + Double(numberTouchedAsDouble)
+                let numberTouchedAsDouble = returnDoubleFromString(numberTouchedAsString)
+                if currentNumber != 0 {
+                    currentNumber = numberTouchedAsDouble
+                } else {
+                    currentNumber = currentNumber * 10 + Double(numberTouchedAsDouble)
+                }
             }
-        } else { print("Could not convert button label to a Int") }
+        } else { print("Could not convert button label to a String") }
         resultOnScreen.append(String(currentNumber))
         clearZeroes()
         result.text = resultOnScreen
