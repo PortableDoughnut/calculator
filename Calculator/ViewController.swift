@@ -56,6 +56,12 @@ class ViewController: UIViewController {
         }
     }
     
+    func concatenateDigits() {
+        resultOnScreen.append(String(currentNumber))
+        clearZeroes()
+        result.text = resultOnScreen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,6 +80,7 @@ class ViewController: UIViewController {
             if numberTouchedAsString  == "." {
                 if !resultOnScreen.contains(".") {
                     resultOnScreen.append(".")
+                    result.text?.append(".")
                 } else { return }
             } else {
                 let numberTouchedAsDouble = returnDoubleFromString(numberTouchedAsString)
@@ -82,11 +89,9 @@ class ViewController: UIViewController {
                 } else {
                     currentNumber = currentNumber * 10 + Double(numberTouchedAsDouble)
                 }
+                concatenateDigits()
             }
         } else { print("Could not convert button label to a String") }
-        resultOnScreen.append(String(currentNumber))
-        clearZeroes()
-        result.text = resultOnScreen
     }
     
     @IBAction func clearButtonTouched(_ sender: UIButton) {
