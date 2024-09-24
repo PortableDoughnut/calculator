@@ -47,6 +47,10 @@ class ViewController: UIViewController {
         }
         if resultOnScreen.last == "0" && resultOnScreen.contains(".") {
             resultOnScreen.removeLast()
+            
+            if resultOnScreen.hasSuffix(".") {
+                resultOnScreen.removeLast()
+            }
         }
     }
     
@@ -73,9 +77,6 @@ class ViewController: UIViewController {
             }
         } else { print("Could not convert button label to a Int") }
         resultOnScreen.append(String(currentNumber))
-        if resultOnScreen.contains(".0") {
-            resultOnScreen = resultOnScreen.replacingOccurrences(of: ".0", with: "")
-        }
         clearZeroes()
         result.text = resultOnScreen
     }
