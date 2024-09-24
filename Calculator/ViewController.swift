@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     
     var equation: [ButtonType] = []
     var resultOnScreen: String = ""
+    var currentNumber: Double = 0
     
     func returnDoubleFromString(_ string: String) -> Double {
         guard let double = Double(string) else { return 0 }
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        guard let resultOnScreen = result.text else { return }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +54,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchNumber(_ sender: UIButton) {
-        
+        if let numberTouched = sender.titleLabel?.text {
+            
+        } else { print("Could not convert button label to a String") }
     }
     
     @IBAction func clearButtonTouched(_ sender: UIButton) {
