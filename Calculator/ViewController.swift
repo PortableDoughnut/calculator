@@ -152,7 +152,63 @@ class ViewController: UIViewController {
                          resultOnScreen: \(resultOnScreen)
                          currentNumber: \(currentNumber)
                          """)
-                   print(operatorToUse)
-               }
+            
+            let getOperatorRawValue: () -> String = {
+                if case let .operators(value) = operatorToUse {
+                    return value.rawValue
+                } else {
+                    return "Error converting operator to string."
+                }
             }
+            
+            let getDoubleFromNumberType: (_ number: ButtonType) -> Double = {number in 
+                if case let .number(value) = number {
+                    print(value)
+                    return value
+                } else {
+                    return 0
+                }
+            }
+            
+            var resultToCalculate: Double = getDoubleFromNumberType((equation.first(where: {
+                if case .number = $0 {
+                    return true
+                } else {
+                    return false
+                }
+            }) ?? ButtonType.number(0)))
+            
+            equation.remove(at: equation.firstIndex(where: {
+                if case .number = $0 {
+                    return true
+                } else {
+                    return false
+                }
+            }) ?? 0)
+            
+            for element in equation {
+                switch element {
+                case .number:
+                    switch getOperatorRawValue() {
+                    case "+":
+                        resultToCalculate += getDoubleFromNumberType(element)
+                    case "-":
+                        resultToCalculate -= getDoubleFromNumberType(element)
+                    case "x":
+                        resultToCalculate *= getDoubleFromNumberType(element)
+                    case "/":
+                        resultToCalculate /= getDoubleFromNumberType(element)
+                    default:
+                        break
+                    }
+                default:
+                    break
+                }
+            }
+            print(resultToCalculate)
+            
+            equation.removeAll()
+            equation.append(.number(resultToCalculate))
+        }
     }
+}
