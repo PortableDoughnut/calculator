@@ -140,14 +140,14 @@ class ViewController: UIViewController {
     @IBAction func equalTouched(_ sender: UIButton) {
         equation.append(ButtonType.number(returnDoubleFromString(resultOnScreen)))
         
-               if let operatorToUse = equation.first(where: {
-                    if case .operators = $0 {
-                        return true
-                    } else {
-                        return false
-                    }
-               }) {
-                   print("""
+        if let operatorToUse = equation.first(where: {
+            if case .operators = $0 {
+                return true
+            } else {
+                return false
+            }
+        }) {
+            print("""
                          equation: \(equation)
                          resultOnScreen: \(resultOnScreen)
                          currentNumber: \(currentNumber)
