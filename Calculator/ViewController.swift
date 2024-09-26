@@ -189,15 +189,16 @@ class ViewController: UIViewController {
             for element in equation {
                 switch element {
                 case .number:
+                    let numberToCalculate = getDoubleFromNumberType(element)
                     switch getOperatorRawValue() {
                     case "+":
-                        resultToCalculate += getDoubleFromNumberType(element)
+                        resultToCalculate += numberToCalculate
                     case "-":
-                        resultToCalculate -= getDoubleFromNumberType(element)
+                        resultToCalculate -= numberToCalculate
                     case "x":
-                        resultToCalculate *= getDoubleFromNumberType(element)
+                        resultToCalculate = resultToCalculate * numberToCalculate
                     case "/":
-                        resultToCalculate /= getDoubleFromNumberType(element)
+                        resultToCalculate = resultToCalculate / numberToCalculate
                     default:
                         break
                     }
