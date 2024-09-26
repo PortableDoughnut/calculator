@@ -43,22 +43,26 @@ class ViewController: UIViewController {
         return double
     }
     
-    func clearZeroes() {
-        if resultOnScreen.first == "0" {
-            resultOnScreen.removeFirst()
+    func clearZeroes(_ toClear: String) -> String {
+        var toClearMutable: String = toClear
+        
+        if toClearMutable.first == "0" {
+            toClearMutable.removeFirst()
         }
-        if resultOnScreen.last == "0" && resultOnScreen.contains(".") {
-            resultOnScreen.removeLast()
+        if toClearMutable.last == "0" && toClear.contains(".") {
+            toClearMutable.removeLast()
             
-            if resultOnScreen.hasSuffix(".") {
-                resultOnScreen.removeLast()
+            if toClearMutable.hasSuffix(".") {
+                toClearMutable.removeLast()
             }
         }
+        
+        return toClearMutable
     }
     
     func concatenateDigits() {
         resultOnScreen.append(String(currentNumber))
-        clearZeroes()
+        resultOnScreen = clearZeroes(resultOnScreen)
         result.text = resultOnScreen
     }
     
@@ -106,12 +110,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operatorTouched(_ sender: UIButton) {
-        print("""
-              equation: \(equation)
-              resultOnScreen: \(resultOnScreen)
-              currentNumber: \(currentNumber)
-              """)
-        print()
+//        print("""
+//              equation: \(equation)
+//              resultOnScreen: \(resultOnScreen)
+//              currentNumber: \(currentNumber)
+//              """)
+//        print()
         
         guard let operatorTouchedAsString = sender.titleLabel?.text else {
             print("operator title could not be converted to string")
@@ -126,11 +130,11 @@ class ViewController: UIViewController {
         equation.append(ButtonType.number(returnDoubleFromString(resultOnScreen)))
         equation.append(ButtonType.operators(currentOperator))
         
-        print("""
-              equation: \(equation)
-              resultOnScreen: \(resultOnScreen)
-              currentNumber: \(currentNumber)
-              """)
+//        print("""
+//              equation: \(equation)
+//              resultOnScreen: \(resultOnScreen)
+//              currentNumber: \(currentNumber)
+//              """)
         
         result.text = "0"
         resultOnScreen = result?.text ?? "0"
@@ -147,11 +151,11 @@ class ViewController: UIViewController {
                 return false
             }
         }) {
-            print("""
-                         equation: \(equation)
-                         resultOnScreen: \(resultOnScreen)
-                         currentNumber: \(currentNumber)
-                         """)
+//            print("""
+//                         equation: \(equation)
+//                         resultOnScreen: \(resultOnScreen)
+//                         currentNumber: \(currentNumber)
+//                         """)
             
             let getOperatorRawValue: () -> String = {
                 if case let .operators(value) = operatorToUse {
@@ -163,20 +167,20 @@ class ViewController: UIViewController {
             
             let getDoubleFromNumberType: (_ number: ButtonType) -> Double = {number in 
                 if case let .number(value) = number {
-                    print(value)
+//                    print(value)
                     return value
                 } else {
                     return 0
                 }
             }
             
-            var resultToCalculate: Double = getDoubleFromNumberType((equation.first(where: {
-                if case .number = $0 {
+            var resultToCalculate: Double = getDoubleFromNumberType(equation.first { element in
+                if case .number = element {
                     return true
                 } else {
                     return false
                 }
-            }) ?? ButtonType.number(0)))
+            } ?? ButtonType.number(0))
             
             equation.remove(at: equation.firstIndex(where: {
                 if case .number = $0 {
@@ -197,7 +201,7 @@ class ViewController: UIViewController {
                         resultToCalculate -= numberToCalculate
                     case "x":
                         resultToCalculate = resultToCalculate * numberToCalculate
-                    case "/":
+                    case "÷":
                         resultToCalculate = resultToCalculate / numberToCalculate
                     default:
                         break
@@ -206,10 +210,14 @@ class ViewController: UIViewController {
                     break
                 }
             }
-            print(resultToCalculate)
+//            print(resultToCalculate)
             
+           
+            result.text = clearZeroes(String(resultToCalculate))
+            
+            resultOnScreen = String(resultToCalculate)
+            currentNumber = 0
             equation.removeAll()
-            equation.append(.number(resultToCalculate))
         }
     }
 }
